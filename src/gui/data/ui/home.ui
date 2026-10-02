@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Home</class>
+ <widget class="QWidget" name="Home">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1483</width>
+    <height>883</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>АСУ БСУ 260913 (с) 2026</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../../external/concretetheme/concrete.qrc">
+    <normaloff>:/concrete/auto-mixer.png</normaloff>:/concrete/auto-mixer.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget,#Home
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(73, 73, 73, 255), stop:1 rgba(133, 133, 133, 255));
+}
+QAbstractButton:flat
+{
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+QAbstractButton:flat:pressed
+{
+	background-color: green;
+}
+QAbstractButton:flat[style=&quot;open&quot;]
+{
+	image: url(:/concrete/stop.png);
+}
+QAbstractButton:flat:pressed[style=&quot;open&quot;]
+{
+	image: url(:/concrete/down.png);
+}
+QAbstractButton:flat:checked[style=&quot;open&quot;]
+{
+	image: url(:/concrete/down.png);
+}
+QLabel[style=&quot;huge&quot;]
+{
+	font-size: 20pt;
+	font-weight: bold;
+	color: white;
+}
+QLabel[style=&quot;gigantic&quot;]
+{
+	font-size: 32pt;
+	font-weight: bold;
+	color: white;
+}
+
+QLabel[style=&quot;badge&quot;]
+{
+	border: 1px solid red;
+	background-color: rgba(0,0,0,100);
+	color: white;
+	border-radius: 4px;
+}
+QLabel[style=&quot;vodoley-status&quot;]
+{
+	border: none;
+	background-color: rgb(98, 160, 234);
+	color: white;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 9pt;
+	padding: 8px;
+}
+QLabel[style='hint']
+{
+	color: lightGray;
+	font-weight: bold;
+	font-size: 10pt;
+}
+QLabel[style='tips']
+{
+	color: lightGray;
+	font-size: 7pt;
+}
+QLabel[style='sys']
+{
+	color: yellow;
+	font-size: 7pt;
+}
+QGroupBox[style=&quot;vodoley&quot;]
+{
+	background-color: rgb(94, 92, 100);
+	border: 1px solid gray;
+}
+QAbstractButton:flat[style=&quot;danger&quot;]
+{
+	background-color: rgba(224, 27, 36,80);
+	color: lightGray;
+}
+QAbstractButton:flat::checked[style=&quot;danger&quot;]
+{
+	background-color: rgba(224, 27, 36,255);
+	color: white;
+}
+QAbstractButton:flat[style=&quot;warning&quot;]
+{
+	background-color: rgba(46, 194, 126,80);
+	color: lightGray;
+}
+QAbstractButton:flat::checked[style=&quot;warning&quot;]
+{
+	background-color: rgb(46, 194, 126);
+	color: white;
+}
+</string>
+  </property>
+  <widget class="pyRuntimeTrend" name="trend_1">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>7</y>
+     <width>769</width>
+     <height>352</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#trend_1&gt;QWidget
+{
+	color: silver;
+}</string>
+   </property>
+   <property name="canvasBackground">
+    <brush brushstyle="SolidPattern">
+     <color alpha="255">
+      <red>61</red>
+      <green>56</green>
+      <blue>70</blue>
+     </color>
+    </brush>
+   </property>
+  </widget>
+  <widget class="MixerPanel" name="mixerpanel">
+   <property name="geometry">
+    <rect>
+     <x>1075</x>
+     <y>727</y>
+     <width>229</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ElevatorPanel" name="elevatorpanel">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>552</y>
+     <width>250</width>
+     <height>259</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="mixer_1">
+   <property name="geometry">
+    <rect>
+     <x>1055</x>
+     <y>559</y>
+     <width>247</width>
+     <height>175</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/mixer-planar.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+   <widget class="QLabel" name="status_1">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>173</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>СТАТУС</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="style" stdset="0">
+     <string>badge</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clock_1">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>112</y>
+      <width>62</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="style" stdset="0">
+     <string>huge</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="closed_1">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>119</y>
+      <width>22</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../../../external/concretetheme/concrete.qrc">:/concrete/red.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="closed_2">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>119</y>
+      <width>22</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../../../external/concretetheme/concrete.qrc">:/concrete/green.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="pyAnimation" name="gate_1">
+   <property name="geometry">
+    <rect>
+     <x>1009</x>
+     <y>660</y>
+     <width>114</width>
+     <height>137</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/lmgate.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="DosatorPanel" name="dosatorpanel_01">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>240</y>
+     <width>140</width>
+     <height>60</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="DosatorPanel" name="dosatorpanel_2">
+   <property name="geometry">
+    <rect>
+     <x>1146</x>
+     <y>240</y>
+     <width>140</width>
+     <height>60</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="DosatorPanel" name="dosatorpanel_3">
+   <property name="geometry">
+    <rect>
+     <x>1301</x>
+     <y>240</y>
+     <width>140</width>
+     <height>60</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="DosatorPanel" name="dosatorpanel_4">
+   <property name="geometry">
+    <rect>
+     <x>228</x>
+     <y>650</y>
+     <width>140</width>
+     <height>60</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="dosator_01">
+   <property name="geometry">
+    <rect>
+     <x>892</x>
+     <y>220</y>
+     <width>113</width>
+     <height>238</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/dcement.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+   <widget class="pyAnimation" name="rain_1">
+    <property name="geometry">
+     <rect>
+      <x>42</x>
+      <y>169</y>
+      <width>30</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="running">
+     <bool>true</bool>
+    </property>
+    <property name="source">
+     <url>
+      <string>qrc:/concrete/fillers-rain.mng</string>
+     </url>
+    </property>
+    <property name="ceaseless">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="pyAnimation" name="dosator_2">
+   <property name="geometry">
+    <rect>
+     <x>1161</x>
+     <y>221</y>
+     <width>115</width>
+     <height>174</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/water-dosator.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="dosator_3">
+   <property name="geometry">
+    <rect>
+     <x>1323</x>
+     <y>250</y>
+     <width>86</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/dadditions.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_01">
+   <property name="geometry">
+    <rect>
+     <x>792</x>
+     <y>46</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>СИЛОС-1</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_02">
+   <property name="geometry">
+    <rect>
+     <x>967</x>
+     <y>45</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>СИЛОС-2</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_03">
+   <property name="geometry">
+    <rect>
+     <x>1159</x>
+     <y>45</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БАК ВОДЫ</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_04">
+   <property name="geometry">
+    <rect>
+     <x>1301</x>
+     <y>45</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БАК ХД</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_07">
+   <property name="geometry">
+    <rect>
+     <x>55</x>
+     <y>400</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БУНКЕР-3</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_06">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>400</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БУНКЕР-2</string>
+   </property>
+  </widget>
+  <widget class="DoserPanel" name="doserpanel_05">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>400</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БУНКЕР-1</string>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_3">
+   <property name="geometry">
+    <rect>
+     <x>1179</x>
+     <y>140</y>
+     <width>84</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/pump.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_4">
+   <property name="geometry">
+    <rect>
+     <x>1316</x>
+     <y>141</y>
+     <width>84</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/pump.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_1">
+   <property name="geometry">
+    <rect>
+     <x>802</x>
+     <y>156</y>
+     <width>106</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/lauger.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_2">
+   <property name="geometry">
+    <rect>
+     <x>977</x>
+     <y>155</y>
+     <width>106</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/rauger.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_5">
+   <property name="geometry">
+    <rect>
+     <x>402</x>
+     <y>485</y>
+     <width>146</width>
+     <height>126</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="open_5">
+    <property name="geometry">
+     <rect>
+      <x>57</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helper_1">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>20</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../../../external/concretetheme/concrete.qrc">
+      <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="pyAnimation" name="container_6">
+   <property name="geometry">
+    <rect>
+     <x>221</x>
+     <y>485</y>
+     <width>73</width>
+     <height>126</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-container-l.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="open_6">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_7">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="pyAnimation" name="container_7">
+   <property name="geometry">
+    <rect>
+     <x>48</x>
+     <y>485</y>
+     <width>146</width>
+     <height>126</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="open_8">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helper_3">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>20</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../../../external/concretetheme/concrete.qrc">
+      <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="pyAnimation" name="dosator_4">
+   <property name="geometry">
+    <rect>
+     <x>103</x>
+     <y>691</y>
+     <width>392</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/conveyor.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="open_12">
+    <property name="geometry">
+     <rect>
+      <x>283</x>
+      <y>14</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helper_5">
+    <property name="geometry">
+     <rect>
+      <x>74</x>
+      <y>8</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../../../external/concretetheme/concrete.qrc">
+      <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="below_1">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>740</y>
+     <width>124</width>
+     <height>127</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../../../external/concretetheme/concrete.qrc">:/concrete/elevator-below.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="above_1">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>520</y>
+     <width>124</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../../../external/concretetheme/concrete.qrc">:/concrete/elevator-above.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_1">
+   <property name="geometry">
+    <rect>
+     <x>908</x>
+     <y>162</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_2">
+   <property name="geometry">
+    <rect>
+     <x>946</x>
+     <y>161</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_3">
+   <property name="geometry">
+    <rect>
+     <x>1143</x>
+     <y>160</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_4">
+   <property name="geometry">
+    <rect>
+     <x>1410</x>
+     <y>160</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mixer_i_1">
+   <property name="geometry">
+    <rect>
+     <x>656</x>
+     <y>27</y>
+     <width>88</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0000 A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="style" stdset="0">
+    <string>huge</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="helper_6">
+   <property name="geometry">
+    <rect>
+     <x>769</x>
+     <y>160</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="helper_7">
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>162</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_9">
+   <property name="geometry">
+    <rect>
+     <x>934</x>
+     <y>310</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_11">
+   <property name="geometry">
+    <rect>
+     <x>1350</x>
+     <y>310</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_10">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>310</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_2">
+   <property name="geometry">
+    <rect>
+     <x>1204</x>
+     <y>389</y>
+     <width>32</width>
+     <height>95</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/water-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_3">
+   <property name="geometry">
+    <rect>
+     <x>1352</x>
+     <y>376</y>
+     <width>32</width>
+     <height>95</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/water-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_4">
+   <property name="geometry">
+    <rect>
+     <x>86</x>
+     <y>604</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_5">
+   <property name="geometry">
+    <rect>
+     <x>131</x>
+     <y>605</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_6">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>606</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_7">
+   <property name="geometry">
+    <rect>
+     <x>303</x>
+     <y>605</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_8">
+   <property name="geometry">
+    <rect>
+     <x>436</x>
+     <y>606</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="rain_9">
+   <property name="geometry">
+    <rect>
+     <x>481</x>
+     <y>605</y>
+     <width>30</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="running">
+    <bool>true</bool>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-rain.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="disable_1">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>367</y>
+     <width>57</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>190</red>
+         <green>190</green>
+         <blue>190</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="text">
+    <string>ВЫК</string>
+   </property>
+   <property name="style" stdset="0">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="disable_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>367</y>
+     <width>57</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>190</red>
+         <green>190</green>
+         <blue>190</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="text">
+    <string>ВЫК</string>
+   </property>
+   <property name="style" stdset="0">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="disable_4">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>11</y>
+     <width>57</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>190</red>
+         <green>190</green>
+         <blue>190</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="text">
+    <string>ВЫК</string>
+   </property>
+   <property name="style" stdset="0">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="disable_3">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>11</y>
+     <width>57</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>190</red>
+         <green>190</green>
+         <blue>190</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="text">
+    <string>ВЫК</string>
+   </property>
+   <property name="style" stdset="0">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="forbid">
+   <property name="geometry">
+    <rect>
+     <x>1053</x>
+     <y>469</y>
+     <width>116</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>НЕ НАБИРАТЬ</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>danger</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="breakpoint">
+   <property name="geometry">
+    <rect>
+     <x>1190</x>
+     <y>470</y>
+     <width>116</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>НЕ ЗАГРУЖАТЬ</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>warning</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1310</x>
+     <y>618</y>
+     <width>30</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/bell.png</normaloff>:/concrete/bell.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1138</x>
+     <y>520</y>
+     <width>85</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>ВОДА</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="compressor">
+   <property name="geometry">
+    <rect>
+     <x>1326</x>
+     <y>828</y>
+     <width>143</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>КОМПРЕССОР</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>warning</string>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_6r">
+   <property name="geometry">
+    <rect>
+     <x>294</x>
+     <y>485</y>
+     <width>73</width>
+     <height>126</height>
+    </rect>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/fillers-container-r.mng</string>
+    </url>
+   </property>
+   <property name="bounce">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="open_13">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_14">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>60</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="style" stdset="0">
+     <string>open</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="helper_2">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>504</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>container_6</zorder>
+  <zorder>container_6r</zorder>
+  <zorder>gate_1</zorder>
+  <zorder>container_4</zorder>
+  <zorder>container_3</zorder>
+  <zorder>container_7</zorder>
+  <zorder>dosator_3</zorder>
+  <zorder>dosator_2</zorder>
+  <zorder>dosator_01</zorder>
+  <zorder>trend_1</zorder>
+  <zorder>mixerpanel</zorder>
+  <zorder>elevatorpanel</zorder>
+  <zorder>mixer_1</zorder>
+  <zorder>dosatorpanel_01</zorder>
+  <zorder>dosatorpanel_2</zorder>
+  <zorder>dosatorpanel_3</zorder>
+  <zorder>doserpanel_01</zorder>
+  <zorder>doserpanel_02</zorder>
+  <zorder>doserpanel_03</zorder>
+  <zorder>doserpanel_04</zorder>
+  <zorder>doserpanel_07</zorder>
+  <zorder>doserpanel_06</zorder>
+  <zorder>container_1</zorder>
+  <zorder>container_2</zorder>
+  <zorder>container_5</zorder>
+  <zorder>doserpanel_05</zorder>
+  <zorder>dosator_4</zorder>
+  <zorder>dosatorpanel_4</zorder>
+  <zorder>below_1</zorder>
+  <zorder>above_1</zorder>
+  <zorder>open_1</zorder>
+  <zorder>open_2</zorder>
+  <zorder>open_3</zorder>
+  <zorder>open_4</zorder>
+  <zorder>mixer_i_1</zorder>
+  <zorder>helper_6</zorder>
+  <zorder>helper_7</zorder>
+  <zorder>open_9</zorder>
+  <zorder>open_11</zorder>
+  <zorder>open_10</zorder>
+  <zorder>rain_2</zorder>
+  <zorder>rain_3</zorder>
+  <zorder>rain_4</zorder>
+  <zorder>rain_5</zorder>
+  <zorder>rain_6</zorder>
+  <zorder>rain_7</zorder>
+  <zorder>rain_8</zorder>
+  <zorder>rain_9</zorder>
+  <zorder>disable_1</zorder>
+  <zorder>disable_2</zorder>
+  <zorder>disable_4</zorder>
+  <zorder>disable_3</zorder>
+  <zorder>forbid</zorder>
+  <zorder>breakpoint</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>lineEdit</zorder>
+  <zorder>compressor</zorder>
+  <zorder>helper_2</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DosatorPanel</class>
+   <extends>QGroupBox</extends>
+   <header>concreteui/dosatorpanel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DoserPanel</class>
+   <extends>QGroupBox</extends>
+   <header>concreteui/doserpanel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ElevatorPanel</class>
+   <extends>QGroupBox</extends>
+   <header>concreteui/elevatorpanel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MixerPanel</class>
+   <extends>QGroupBox</extends>
+   <header>concreteui/mixerpanel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>pyAnimation</class>
+   <extends>QLabel</extends>
+   <header>pysca.animation</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>pyRuntimeTrend</class>
+   <extends>QwtPlot</extends>
+   <header>pysca.runtimetrend</header>
+  </customwidget>
+  <customwidget>
+   <class>QwtPlot</class>
+   <extends>QFrame</extends>
+   <header>qwt_plot.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../../../external/concretetheme/concrete.qrc"/>
+ </resources>
+ <connections/>
+</ui>
