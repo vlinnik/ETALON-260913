@@ -1,6 +1,7 @@
 main:
   stdout: "DEBUG:INFO"
   stderr: "WARNING:"
+  prefix: src/gui/data
 
 paths: # настройка путей проекта
   workspace: . # относительно файла конфигурации или текущего каталога запуска

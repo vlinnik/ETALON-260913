@@ -17,6 +17,12 @@ if yaml_src.exists():
 for rcc_file in root.glob("*.rcc"):
     shutil.copy2(rcc_file, pkg_data / rcc_file.name)
 
+for ini_file in root.glob("*.ini"):
+    shutil.copy2(ini_file, pkg_data / ini_file.name)
+
+for dat_file in root.glob("*.dat"):
+    shutil.copy2(dat_file, pkg_data / dat_file.name)
+
 setup(
     name="etalon-260913",
     package_dir={"": "src"},
