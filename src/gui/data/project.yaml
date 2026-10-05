@@ -1,0 +1,47 @@
+main:
+  stdout: "DEBUG:INFO"
+  stderr: "WARNING:"
+
+paths: # настройка путей проекта
+  workspace: . # относительно файла конфигурации или текущего каталога запуска
+  modules:
+    - src/gui
+    - src
+    - src/gui/data # чтобы import widgets работал
+  simulator: . # рабочий каталог запуска логик(и) имитаций относительно workspace
+  resources: # где искать файлы ресурсов относительно workspace
+    - src/gui
+    - src/gui/data
+    - external/concretetheme
+  forms: src/gui/data/ui # где формы лежат.
+  widgets: src/gui/data/widgets # где widget-ы лежат.
+windows:
+  - name: Home
+    ui: home.ui
+    show: true
+    title: АСУ БСУ 260913 (с) ЭТАЛОН-КОМ, 2026
+    module: home
+  - name: Extensions
+    ui: extensions.ui
+    show: true
+devices:
+  - name: PLC
+    type: PYPLC
+    args:
+      device: 192.168.1.10
+simulator:
+  - task: master
+    exec: src/plc/krax.py
+    args:
+      - -w
+      - src/plc
+modules:
+  - name: concrete6
+    args:
+      panels: doserpanel_.*
+navbar:
+  pages:
+    - Home
+  tools:
+    - Extensions
+  title: "АСУ БСУ ETALON-260913 (c) ЭТАЛОН-КОМ 2026"

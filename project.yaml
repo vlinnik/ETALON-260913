@@ -20,6 +20,7 @@ windows:
     ui: home.ui
     show: true
     title: АСУ БСУ 260913 (с) ЭТАЛОН-КОМ, 2026
+    module: home
   - name: Extensions
     ui: extensions.ui
     show: true
@@ -43,3 +44,4 @@ navbar:
     - Home
   tools:
     - Extensions
+  title: "АСУ БСУ ETALON-260913 (c) ЭТАЛОН-КОМ 2026"

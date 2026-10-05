@@ -144,18 +144,21 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="MixerPanel" name="mixerpanel">
    <property name="geometry">
     <rect>
-     <x>1075</x>
+     <x>1038</x>
      <y>727</y>
-     <width>229</width>
+     <width>266</width>
      <height>71</height>
     </rect>
+   </property>
+   <property name="gateType">
+    <enum>MixerPanel::Hydraulic</enum>
    </property>
   </widget>
   <widget class="ElevatorPanel" name="elevatorpanel">
    <property name="geometry">
     <rect>
      <x>710</x>
-     <y>552</y>
+     <y>500</y>
      <width>250</width>
      <height>259</height>
     </rect>
@@ -169,6 +172,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>247</width>
      <height>175</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -276,6 +282,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>60</height>
     </rect>
    </property>
+   <property name="title">
+    <string>ЦЕМЕНТ</string>
+   </property>
   </widget>
   <widget class="DosatorPanel" name="dosatorpanel_2">
    <property name="geometry">
@@ -285,6 +294,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>140</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="title">
+    <string>ВОДА</string>
    </property>
   </widget>
   <widget class="DosatorPanel" name="dosatorpanel_3">
@@ -296,6 +308,12 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>60</height>
     </rect>
    </property>
+   <property name="title">
+    <string>ХД</string>
+   </property>
+   <property name="precision">
+    <number>3</number>
+   </property>
   </widget>
   <widget class="DosatorPanel" name="dosatorpanel_4">
    <property name="geometry">
@@ -306,6 +324,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>60</height>
     </rect>
    </property>
+   <property name="title">
+    <string>КОНВЕЙЕР</string>
+   </property>
   </widget>
   <widget class="pyAnimation" name="dosator_01">
    <property name="geometry">
@@ -315,6 +336,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>113</width>
      <height>238</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -355,6 +379,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>174</height>
     </rect>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
    <property name="source">
     <url>
      <string>qrc:/concrete/water-dosator.mng</string>
@@ -372,6 +399,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>86</width>
      <height>131</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -433,6 +463,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
    <property name="title">
     <string>БАК ХД</string>
    </property>
+   <property name="precision">
+    <number>2</number>
+   </property>
   </widget>
   <widget class="DoserPanel" name="doserpanel_07">
    <property name="geometry">
@@ -482,6 +515,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>82</height>
     </rect>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
    <property name="source">
     <url>
      <string>qrc:/concrete/pump.mng</string>
@@ -499,6 +535,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>84</width>
      <height>82</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -518,6 +557,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>50</height>
     </rect>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
    <property name="source">
     <url>
      <string>qrc:/concrete/lauger.mng</string>
@@ -536,6 +578,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>50</height>
     </rect>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
    <property name="source">
     <url>
      <string>qrc:/concrete/rauger.mng</string>
@@ -553,6 +598,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>146</width>
      <height>126</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -641,6 +689,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <height>126</height>
     </rect>
    </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
    <property name="source">
     <url>
      <string>qrc:/concrete/fillers-container-l.mng</string>
@@ -720,6 +771,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>146</width>
      <height>126</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -807,6 +861,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>392</width>
      <height>54</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -1640,6 +1697,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
    <property name="text">
     <string>НЕ НАБИРАТЬ</string>
    </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="flat">
     <bool>true</bool>
    </property>
@@ -1659,6 +1719,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
    <property name="text">
     <string>НЕ ЗАГРУЖАТЬ</string>
    </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="flat">
     <bool>true</bool>
    </property>
@@ -1666,7 +1729,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <string>warning</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="bell_1">
    <property name="geometry">
     <rect>
      <x>1310</x>
@@ -1744,6 +1807,9 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
      <width>73</width>
      <height>126</height>
     </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
    </property>
    <property name="source">
     <url>
@@ -1854,6 +1920,196 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="powered_1">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>861</y>
+     <width>30</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="style" stdset="0">
+    <string>sys</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="scantime_1">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>844</y>
+     <width>30</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="style" stdset="0">
+    <string>sys</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ack_1">
+   <property name="geometry">
+    <rect>
+     <x>924</x>
+     <y>410</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/attention.png</normaloff>:/concrete/attention.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ack_2">
+   <property name="geometry">
+    <rect>
+     <x>1194</x>
+     <y>410</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/attention.png</normaloff>:/concrete/attention.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ack_3">
+   <property name="geometry">
+    <rect>
+     <x>1342</x>
+     <y>410</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/attention.png</normaloff>:/concrete/attention.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ack_4">
+   <property name="geometry">
+    <rect>
+     <x>273</x>
+     <y>749</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/attention.png</normaloff>:/concrete/attention.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>container_6</zorder>
   <zorder>container_6r</zorder>
   <zorder>gate_1</zorder>
@@ -1908,10 +2164,16 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <zorder>disable_3</zorder>
   <zorder>forbid</zorder>
   <zorder>breakpoint</zorder>
-  <zorder>pushButton_3</zorder>
+  <zorder>bell_1</zorder>
   <zorder>lineEdit</zorder>
   <zorder>compressor</zorder>
   <zorder>helper_2</zorder>
+  <zorder>powered_1</zorder>
+  <zorder>scantime_1</zorder>
+  <zorder>ack_1</zorder>
+  <zorder>ack_2</zorder>
+  <zorder>ack_3</zorder>
+  <zorder>ack_4</zorder>
  </widget>
  <customwidgets>
   <customwidget>

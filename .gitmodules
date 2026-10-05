@@ -10,3 +10,10 @@
 [submodule "src/plc/concrete"]
 	path = src/plc/concrete
 	url = https://github.com/vlinnik/concrete.git
+[submodule "external/pyplc"]
+	path = external/pyplc
+	url = https://github.com/vlinnik/pyplc.git
+	branch = wip/app
+[submodule "external/pysca"]
+	path = external/pysca
+	url = https://github.com/vlinnik/pysca.git

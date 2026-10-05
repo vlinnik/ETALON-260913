@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>489</width>
-    <height>74</height>
+    <width>535</width>
+    <height>70</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,21 +26,7 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item row="0" column="0">
-    <widget class="QCheckBox" name="vibrator_1">
-     <property name="text">
-      <string>В. БИМ-1</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QCheckBox" name="vibrator_3">
-     <property name="text">
-      <string>В. БИМ-3</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="2" rowspan="2">
+   <item row="0" column="3" rowspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>СМ-1</string>
@@ -98,12 +84,46 @@
      </layout>
     </widget>
    </item>
+   <item row="0" column="1">
+    <widget class="QCheckBox" name="vibrator_3">
+     <property name="text">
+      <string>В. БИМ-3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QCheckBox" name="vibrator_1">
+     <property name="text">
+      <string>В. БИМ-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QCheckBox" name="df_vibrator_1">
+     <property name="text">
+      <string>В.  КОНВ</string>
+     </property>
+    </widget>
+   </item>
    <item row="1" column="0">
     <widget class="QCheckBox" name="vibrator_2">
      <property name="text">
       <string>В. БИМ-2</string>
      </property>
     </widget>
+   </item>
+   <item row="0" column="2" rowspan="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>
