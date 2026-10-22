@@ -121,7 +121,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <rect>
      <x>2</x>
      <y>7</y>
-     <width>769</width>
+     <width>629</width>
      <height>352</height>
     </rect>
    </property>
@@ -144,7 +144,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="MixerPanel" name="mixerpanel">
    <property name="geometry">
     <rect>
-     <x>1038</x>
+     <x>950</x>
      <y>727</y>
      <width>266</width>
      <height>71</height>
@@ -157,8 +157,8 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="ElevatorPanel" name="elevatorpanel">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>500</y>
+     <x>560</x>
+     <y>460</y>
      <width>250</width>
      <height>259</height>
     </rect>
@@ -167,7 +167,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="mixer_1">
    <property name="geometry">
     <rect>
-     <x>1055</x>
+     <x>967</x>
      <y>559</y>
      <width>247</width>
      <height>175</height>
@@ -258,7 +258,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="gate_1">
    <property name="geometry">
     <rect>
-     <x>1009</x>
+     <x>921</x>
      <y>660</y>
      <width>114</width>
      <height>137</height>
@@ -276,7 +276,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DosatorPanel" name="dosatorpanel_01">
    <property name="geometry">
     <rect>
-     <x>880</x>
+     <x>756</x>
      <y>240</y>
      <width>140</width>
      <height>60</height>
@@ -289,7 +289,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DosatorPanel" name="dosatorpanel_2">
    <property name="geometry">
     <rect>
-     <x>1146</x>
+     <x>1022</x>
      <y>240</y>
      <width>140</width>
      <height>60</height>
@@ -302,7 +302,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DosatorPanel" name="dosatorpanel_3">
    <property name="geometry">
     <rect>
-     <x>1301</x>
+     <x>1259</x>
      <y>240</y>
      <width>140</width>
      <height>60</height>
@@ -331,7 +331,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="dosator_01">
    <property name="geometry">
     <rect>
-     <x>892</x>
+     <x>768</x>
      <y>220</y>
      <width>113</width>
      <height>238</height>
@@ -373,7 +373,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="dosator_2">
    <property name="geometry">
     <rect>
-     <x>1161</x>
+     <x>1037</x>
      <y>221</y>
      <width>115</width>
      <height>174</height>
@@ -394,7 +394,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="dosator_3">
    <property name="geometry">
     <rect>
-     <x>1323</x>
+     <x>1281</x>
      <y>250</y>
      <width>86</width>
      <height>131</height>
@@ -415,7 +415,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DoserPanel" name="doserpanel_01">
    <property name="geometry">
     <rect>
-     <x>792</x>
+     <x>668</x>
      <y>46</y>
      <width>130</width>
      <height>100</height>
@@ -428,7 +428,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DoserPanel" name="doserpanel_02">
    <property name="geometry">
     <rect>
-     <x>967</x>
+     <x>843</x>
      <y>45</y>
      <width>130</width>
      <height>100</height>
@@ -441,7 +441,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DoserPanel" name="doserpanel_03">
    <property name="geometry">
     <rect>
-     <x>1159</x>
+     <x>1035</x>
      <y>45</y>
      <width>130</width>
      <height>100</height>
@@ -454,20 +454,20 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="DoserPanel" name="doserpanel_04">
    <property name="geometry">
     <rect>
-     <x>1301</x>
+     <x>1199</x>
      <y>45</y>
      <width>130</width>
      <height>100</height>
     </rect>
    </property>
    <property name="title">
-    <string>БАК ХД</string>
+    <string>БАК ХД-1</string>
    </property>
    <property name="precision">
     <number>2</number>
    </property>
   </widget>
-  <widget class="DoserPanel" name="doserpanel_07">
+  <widget class="DoserPanel" name="doserpanel_08">
    <property name="geometry">
     <rect>
      <x>55</x>
@@ -480,7 +480,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <string>БУНКЕР-3</string>
    </property>
   </widget>
-  <widget class="DoserPanel" name="doserpanel_06">
+  <widget class="DoserPanel" name="doserpanel_07">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -493,7 +493,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <string>БУНКЕР-2</string>
    </property>
   </widget>
-  <widget class="DoserPanel" name="doserpanel_05">
+  <widget class="DoserPanel" name="doserpanel_06">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -509,7 +509,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="container_3">
    <property name="geometry">
     <rect>
-     <x>1179</x>
+     <x>1055</x>
      <y>140</y>
      <width>84</width>
      <height>82</height>
@@ -530,7 +530,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="container_4">
    <property name="geometry">
     <rect>
-     <x>1316</x>
+     <x>1214</x>
      <y>141</y>
      <width>84</width>
      <height>82</height>
@@ -551,7 +551,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="container_1">
    <property name="geometry">
     <rect>
-     <x>802</x>
+     <x>678</x>
      <y>156</y>
      <width>106</width>
      <height>50</height>
@@ -572,7 +572,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="container_2">
    <property name="geometry">
     <rect>
-     <x>977</x>
+     <x>853</x>
      <y>155</y>
      <width>106</width>
      <height>50</height>
@@ -965,7 +965,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QLabel" name="above_1">
    <property name="geometry">
     <rect>
-     <x>980</x>
+     <x>892</x>
      <y>520</y>
      <width>124</width>
      <height>161</height>
@@ -981,7 +981,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_1">
    <property name="geometry">
     <rect>
-     <x>908</x>
+     <x>784</x>
      <y>162</y>
      <width>32</width>
      <height>32</height>
@@ -1012,7 +1012,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_2">
    <property name="geometry">
     <rect>
-     <x>946</x>
+     <x>822</x>
      <y>161</y>
      <width>32</width>
      <height>32</height>
@@ -1043,7 +1043,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_3">
    <property name="geometry">
     <rect>
-     <x>1143</x>
+     <x>1019</x>
      <y>160</y>
      <width>32</width>
      <height>32</height>
@@ -1074,7 +1074,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_4">
    <property name="geometry">
     <rect>
-     <x>1410</x>
+     <x>1308</x>
      <y>160</y>
      <width>32</width>
      <height>32</height>
@@ -1105,7 +1105,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QLabel" name="mixer_i_1">
    <property name="geometry">
     <rect>
-     <x>656</x>
+     <x>510</x>
      <y>27</y>
      <width>88</width>
      <height>32</height>
@@ -1124,7 +1124,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="helper_6">
    <property name="geometry">
     <rect>
-     <x>769</x>
+     <x>645</x>
      <y>160</y>
      <width>32</width>
      <height>32</height>
@@ -1162,7 +1162,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="helper_7">
    <property name="geometry">
     <rect>
-     <x>1080</x>
+     <x>956</x>
      <y>162</y>
      <width>32</width>
      <height>32</height>
@@ -1200,7 +1200,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_9">
    <property name="geometry">
     <rect>
-     <x>934</x>
+     <x>810</x>
      <y>310</y>
      <width>32</width>
      <height>32</height>
@@ -1234,7 +1234,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_11">
    <property name="geometry">
     <rect>
-     <x>1350</x>
+     <x>1308</x>
      <y>310</y>
      <width>32</width>
      <height>32</height>
@@ -1268,7 +1268,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="open_10">
    <property name="geometry">
     <rect>
-     <x>1200</x>
+     <x>1076</x>
      <y>310</y>
      <width>32</width>
      <height>32</height>
@@ -1302,7 +1302,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="rain_2">
    <property name="geometry">
     <rect>
-     <x>1204</x>
+     <x>1080</x>
      <y>389</y>
      <width>32</width>
      <height>95</height>
@@ -1323,7 +1323,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="pyAnimation" name="rain_3">
    <property name="geometry">
     <rect>
-     <x>1352</x>
+     <x>1310</x>
      <y>376</y>
      <width>32</width>
      <height>95</height>
@@ -1579,7 +1579,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QCheckBox" name="disable_4">
    <property name="geometry">
     <rect>
-     <x>1030</x>
+     <x>906</x>
      <y>11</y>
      <width>57</width>
      <height>23</height>
@@ -1635,7 +1635,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QCheckBox" name="disable_3">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>676</x>
      <y>11</y>
      <width>57</width>
      <height>23</height>
@@ -1688,7 +1688,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="forbid">
    <property name="geometry">
     <rect>
-     <x>1053</x>
+     <x>965</x>
      <y>469</y>
      <width>116</width>
      <height>37</height>
@@ -1710,7 +1710,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="breakpoint">
    <property name="geometry">
     <rect>
-     <x>1190</x>
+     <x>1102</x>
      <y>470</y>
      <width>116</width>
      <height>37</height>
@@ -1732,7 +1732,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="bell_1">
    <property name="geometry">
     <rect>
-     <x>1310</x>
+     <x>1222</x>
      <y>618</y>
      <width>30</width>
      <height>26</height>
@@ -1758,7 +1758,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>1138</x>
+     <x>1050</x>
      <y>520</y>
      <width>85</width>
      <height>32</height>
@@ -1961,7 +1961,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="ack_1">
    <property name="geometry">
     <rect>
-     <x>924</x>
+     <x>800</x>
      <y>410</y>
      <width>48</width>
      <height>48</height>
@@ -1999,7 +1999,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="ack_2">
    <property name="geometry">
     <rect>
-     <x>1194</x>
+     <x>1070</x>
      <y>410</y>
      <width>48</width>
      <height>48</height>
@@ -2037,7 +2037,7 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <widget class="QPushButton" name="ack_3">
    <property name="geometry">
     <rect>
-     <x>1342</x>
+     <x>1300</x>
      <y>410</y>
      <width>48</width>
      <height>48</height>
@@ -2110,6 +2110,144 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="DoserPanel" name="doserpanel_05">
+   <property name="geometry">
+    <rect>
+     <x>1338</x>
+     <y>44</y>
+     <width>130</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>БАК ХД-2</string>
+   </property>
+   <property name="precision">
+    <number>2</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="open_15">
+   <property name="geometry">
+    <rect>
+     <x>1444</x>
+     <y>165</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="style" stdset="0">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="pyAnimation" name="container_8">
+   <property name="geometry">
+    <rect>
+     <x>1350</x>
+     <y>146</y>
+     <width>84</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
+   <property name="source">
+    <url>
+     <string>qrc:/concrete/pump.mng</string>
+    </url>
+   </property>
+   <property name="ceaseless">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="oil_1">
+   <property name="geometry">
+    <rect>
+     <x>1222</x>
+     <y>674</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>автосмазчик включен</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../../../external/concretetheme/concrete.qrc">:/concrete/bolt.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="helper_4">
+   <property name="geometry">
+    <rect>
+     <x>926</x>
+     <y>554</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>Вибратор СКИПА</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../../external/concretetheme/concrete.qrc">
+     <normaloff>:/concrete/power.png</normaloff>:/concrete/power.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>below_1</zorder>
   <zorder>container_6</zorder>
   <zorder>container_6r</zorder>
   <zorder>gate_1</zorder>
@@ -2130,15 +2268,14 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <zorder>doserpanel_02</zorder>
   <zorder>doserpanel_03</zorder>
   <zorder>doserpanel_04</zorder>
+  <zorder>doserpanel_08</zorder>
   <zorder>doserpanel_07</zorder>
-  <zorder>doserpanel_06</zorder>
   <zorder>container_1</zorder>
   <zorder>container_2</zorder>
   <zorder>container_5</zorder>
-  <zorder>doserpanel_05</zorder>
+  <zorder>doserpanel_06</zorder>
   <zorder>dosator_4</zorder>
   <zorder>dosatorpanel_4</zorder>
-  <zorder>below_1</zorder>
   <zorder>above_1</zorder>
   <zorder>open_1</zorder>
   <zorder>open_2</zorder>
@@ -2174,6 +2311,11 @@ QAbstractButton:flat::checked[style=&quot;warning&quot;]
   <zorder>ack_2</zorder>
   <zorder>ack_3</zorder>
   <zorder>ack_4</zorder>
+  <zorder>doserpanel_05</zorder>
+  <zorder>open_15</zorder>
+  <zorder>container_8</zorder>
+  <zorder>oil_1</zorder>
+  <zorder>helper_4</zorder>
  </widget>
  <customwidgets>
   <customwidget>

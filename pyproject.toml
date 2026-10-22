@@ -41,4 +41,4 @@ gui = ["data/**/*"]
 
 [tool.setuptools.data-files]
 "share/applications" = ["etalon-260913.desktop"]
-"share/icons/hicolor/48x48/apps" = ["etalon-260913.png"]
+"share/icons/hicolor/128x128/apps" = ["etalon-260913.png"]

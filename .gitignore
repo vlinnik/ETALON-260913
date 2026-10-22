@@ -9,3 +9,5 @@ dist
 *_rc.py
 persist.dat
 tmp
+debian/source
+debian/python-etalon-260913-doc.substvars

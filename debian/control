@@ -1,0 +1,24 @@
+Source: etalon-260913
+Section: utils
+Priority: optional
+Maintainer: vlinnik <vlinnik@mail.ru>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-setuptools,
+ python3-all,
+Standards-Version: 4.7.2
+Homepage: https://github.com/vlinnik/etalon-260913.git
+
+Package: python3-etalon-260913
+Architecture: all
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+Suggests:
+ python-etalon-260913-doc,
+Description: HMI for ETALON-260913 (Python 3)
+ HMI for concrete plant ETALON-260913
+ .
+ This package installs the library for Python 3.

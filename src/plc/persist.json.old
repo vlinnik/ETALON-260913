@@ -1,0 +1,184 @@
+{
+  "factory_1": {
+    "properties": ["activated", "moto", "powered", "used"],
+    "layout": [
+      [0, 1],
+      [1, 8],
+      [9, 8],
+      [17, 8]
+    ]
+  },
+  "elevator_1": {
+    "properties": ["maxT", "moveT", "pauseT", "unloadT"],
+    "layout": [
+      [25, 8],
+      [33, 8],
+      [41, 8],
+      [49, 8]
+    ]
+  },
+  "gate_1": {
+    "properties": ["count", "dr", "middle_t"],
+    "layout": [
+      [57, 8],
+      [65, 8],
+      [524, 8]
+    ]
+  },
+  "cement_m_1": {
+    "properties": ["a", "k", "step"],
+    "layout": [
+      [73, 8],
+      [81, 8],
+      [89, 8]
+    ]
+  },
+  "water_m_1": {
+    "properties": ["a", "k", "step"],
+    "layout": [
+      [97, 8],
+      [105, 8],
+      [113, 8]
+    ]
+  },
+  "addition_m_1": {
+    "properties": ["a", "k", "step"],
+    "layout": [
+      [121, 8],
+      [129, 8],
+      [137, 8]
+    ]
+  },
+  "fillers_m_1": {
+    "properties": ["a", "k", "step"],
+    "layout": [
+      [145, 8],
+      [153, 8],
+      [161, 8]
+    ]
+  },
+  "auger_1": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [169, 8],
+      [177, 8],
+      [185, 8],
+      [193, 8],
+      [201, 8]
+    ]
+  },
+  "auger_2": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [209, 8],
+      [217, 8],
+      [225, 8],
+      [233, 8],
+      [241, 8]
+    ]
+  },
+  "dcement_1": {
+    "properties": ["ignore", "unloadT"],
+    "layout": [
+      [249, 8],
+      [257, 8]
+    ]
+  },
+  "water_1": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [265, 8],
+      [273, 8],
+      [281, 8],
+      [289, 8],
+      [297, 8]
+    ]
+  },
+  "dwater_1": {
+    "properties": ["ignore", "unloadT"],
+    "layout": [
+      [305, 8],
+      [313, 8]
+    ]
+  },
+  "addition_1": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [321, 8],
+      [329, 8],
+      [337, 8],
+      [345, 8],
+      [353, 8]
+    ]
+  },
+  "daddition_1": {
+    "properties": ["ignore", "unloadT"],
+    "layout": [
+      [361, 8],
+      [369, 8]
+    ]
+  },
+  "filler_1": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [377, 8],
+      [385, 8],
+      [393, 8],
+      [401, 8],
+      [409, 8]
+    ]
+  },
+  "assembly_2": {
+    "properties": ["en", "disable_1", "disable_2"],
+    "layout": [
+      [417, 1],
+      [418, 1],
+      [419, 1]
+    ]
+  },
+  "filler_2": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [420, 8],
+      [428, 8],
+      [436, 8],
+      [444, 8],
+      [452, 8]
+    ]
+  },
+  "filler_3": {
+    "properties": ["e", "max_ff", "max_w", "min_ff", "min_w"],
+    "layout": [
+      [460, 8],
+      [468, 8],
+      [476, 8],
+      [484, 8],
+      [492, 8]
+    ]
+  },
+  "fillers_1": {
+    "properties": ["ignore", "unloadT"],
+    "layout": [
+      [500, 8],
+      [508, 8]
+    ]
+  },
+  "vibrator_1": { "properties": ["auto"], "layout": [[516, 1]] },
+  "vibrator_2": { "properties": ["auto"], "layout": [[517, 1]] },
+  "vibrator_3": { "properties": ["auto"], "layout": [[518, 1]] },
+  "df_vibrator_1": {
+    "properties": ["auto", "ignore_dm"],
+    "layout": [
+      [519, 1],
+      [520, 1]
+    ]
+  },
+  "assembly_1": {
+    "properties": ["en", "disable_1", "disable_2"],
+    "layout": [
+      [521, 1],
+      [522, 1],
+      [523, 1]
+    ]
+  }
+}
