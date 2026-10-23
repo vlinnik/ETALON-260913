@@ -39,7 +39,7 @@ wpump_2 = TON(clk=hw.DWATER_OPEN_1, q = hw.WPUMP_ON_2)
 
 addition_1 = Container(m = addition_m_1.get_m, out=hw.APUMP_ON_1, lock=Lock(key=hw.DADDITIONS_OPEN_1),max_sp = 100 )
 addition_2 = Container(m = addition_m_1.get_m, out=hw.APUMP_ON_2, lock=Lock(key=hw.DADDITIONS_OPEN_1),max_sp = 100 )
-daddition_1 = Dosator(m = addition_m_1.get_m, containers = (addition_1,addition_2),lock=Lock(key=hw.APUMP_ON_1), out = hw.DADDITIONS_OPEN_1 )
+daddition_1 = Dosator(m = addition_m_1.get_m, containers = (addition_1,addition_2),lock=Lock(key=lambda: hw.APUMP_ON_1 or hw.APUMP_ON_2), out = hw.DADDITIONS_OPEN_1 )
 
 filler_1 = Container( m=fillers_m_1.get_m, out=hw.FEEDER_ON_1, closed=~hw.FEEDER_ON_1,lock=Lock(key=lambda: not filler_3.closed or not filler_2.closed or hw.CONVEYOR_ON_1),max_sp = 4000 )
 assembly_2 = Assembly2( outs = (hw.FILLER_OPEN_2L,hw.FILLER_OPEN_2R),sts = (~hw.FILLER_OPEN_2L,~hw.FILLER_OPEN_2R) )
@@ -49,10 +49,14 @@ assembly_2.en = True
 filler_3 = Container( m=fillers_m_1.get_m, out=hw.FEEDER_ON_3,lock=Lock(key=lambda: not filler_1.closed or not filler_2.closed or hw.CONVEYOR_ON_1), max_sp = 4000 )
 
 fillers_1 = Dosator(m = fillers_m_1.get_m,containers = (filler_1,filler_2,filler_3), out = hw.CONVEYOR_ON_1,lock=Lock(key=lambda: hw.FILLER_OPEN_2R or hw.FILLER_OPEN_2L or hw.FEEDER_ON_1 or hw.FEEDER_ON_3 or not hw.ELEVATOR_BELOW_1) )
-vibrator_1 = Vibrator( q = hw.VIBRATOR_ON_1,containers=(hw.FEEDER_ON_1,),weight = fillers_m_1)
+vibrator_1 = Vibrator( containers=(hw.FEEDER_ON_1,),weight = fillers_m_1)
 vibrator_2 = Vibrator( q = hw.VIBRATOR_ON_2,containers=(hw.FILLER_OPEN_2R,hw.FILLER_OPEN_2L),weight = fillers_m_1)
-vibrator_3 = Vibrator( q = hw.VIBRATOR_ON_3,containers=(hw.FEEDER_ON_3,),weight = fillers_m_1)
-df_vibrator_1 = UnloadHelper(q = hw.DF_VIBRATOR_ON_1, dosator=fillers_1, weight=fillers_m_1)
+vibrator_3 = Vibrator( containers=(hw.FEEDER_ON_3,),weight = fillers_m_1)
+df_vibrator_1 = UnloadHelper(q = hw.DF_VIBRATOR_ON_1, dosator=fillers_1, weight=fillers_m_1,dr=5000)
+
+def vibrator_forever():
+    if vibrator_1.auto: hw.VIBRATOR_ON_1 = hw.FEEDER_ON_1
+    if vibrator_3.auto: hw.VIBRATOR_ON_3 = hw.FEEDER_ON_3
 
 elevator_1 = ElevatorGeneric( up = hw.ELEVATOR_MOVEUP_1, down = hw.ELEVATOR_MOVEDOWN_1, above = hw.ELEVATOR_ABOVE_1, below = hw.ELEVATOR_BELOW_1,containers=(filler_1,filler_2,filler_3),dosator=fillers_1 )
 
@@ -120,7 +124,7 @@ instances = (
             cement_m_1,auger_1,auger_2,dcement_1,assembly_1,
             water_m_1,water_1,dwater_1,wpump_2,
             addition_m_1,addition_1,addition_2,daddition_1,
-            elevator_1,e_vibrator_1,fillers_m_1,filler_1,filler_2,filler_3,assembly_2,fillers_1,vibrator_1,vibrator_2,vibrator_3,df_vibrator_1,
+            elevator_1,e_vibrator_1,fillers_m_1,filler_1,filler_2,filler_3,assembly_2,fillers_1,vibrator_1,vibrator_2,vibrator_3,df_vibrator_1,vibrator_forever,
             factory_1,mixer_1,gate_1,motor_1,oil_1,manager_1,ready_1,loaded_1,
             )
 if platform=='linux':
